@@ -19,7 +19,7 @@ function App() {
     M.AutoInit();
 
     axios
-      .get(`http://www.omdbapi.com/?apikey=b910eb21&s=${text}`)
+      .get(`https://www.omdbapi.com/?apikey=b910eb21&s=${text}`)
       .then(function (response) {
         // handle success
         setMovies(response.data.Search);
