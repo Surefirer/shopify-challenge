@@ -20,6 +20,7 @@ const SearchBar = ({ text, setText }) => {
       e.preventDefault();
     }
   };
+
   return (
     <div>
       <form onSubmit={onSubmithandler} className='nav-wrapper'>

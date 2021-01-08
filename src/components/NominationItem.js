@@ -13,10 +13,13 @@ const NominationItem = ({ nomination, nominations, setNominations }) => {
       {nomination.Title}
       <a
         href='#!'
-        className='btn-small waves-effect waves-light secondary-content'
+        // className='btn-small waves-effect waves-light secondary-content nominate-remove-btn'
+        className='secondary-content'
         onClick={removeNomHandler}
       >
-        Remove
+        <i className='material-icons' style={{ color: 'red' }}>
+          delete_forever
+        </i>
       </a>
     </li>
   );
