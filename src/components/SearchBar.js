@@ -14,6 +14,12 @@ const SearchBar = ({ text, setText }) => {
   const onChangehandler = (e) => {
     setText(e.target.value);
   };
+
+  const onKeyPressHandler = (e) => {
+    if (e.keyCode === 13 || e.which === 13) {
+      e.preventDefault();
+    }
+  };
   return (
     <div>
       <form onSubmit={onSubmithandler} className='nav-wrapper'>
@@ -24,6 +30,7 @@ const SearchBar = ({ text, setText }) => {
             name='text'
             value={text}
             onChange={onChangehandler}
+            onKeyPress={onKeyPressHandler}
           />
           <label className='label-icon' htmlFor='search'>
             <i className='material-icons'>search</i>

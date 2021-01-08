@@ -3,7 +3,7 @@ import NominationItem from './NominationItem';
 import 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css';
 
-const Nominations = ({ nominations, setNominations, setMovies, movies }) => {
+const Nominations = ({ nominations, setNominations, setMovies }) => {
   return (
     <div>
       {nominations.length !== 0 ? (
@@ -18,7 +18,6 @@ const Nominations = ({ nominations, setNominations, setMovies, movies }) => {
               nomination={nomination}
               setNominations={setNominations}
               setMovies={setMovies}
-              movies={movies}
             />
           ))}
         </ul>

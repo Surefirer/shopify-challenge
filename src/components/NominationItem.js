@@ -1,26 +1,12 @@
 import React from 'react';
-import M from 'materialize-css/dist/js/materialize.min.js';
 
-const NominationItem = ({
-  nomination,
-  nominations,
-  setNominations,
-  setMovies,
-  movies,
-}) => {
+const NominationItem = ({ nomination, nominations, setNominations }) => {
   const removeNomHandler = () => {
     const newNomin = nominations.filter(
       (nomi) => nomi.imdbID !== nomination.imdbID
     );
 
-    if (movies) {
-      setNominations(newNomin);
-      setMovies((prevMovie) => [...prevMovie, nomination]);
-    } else {
-      M.toast({
-        html: `Please make sure have the search result before you remove.`,
-      });
-    }
+    setNominations(newNomin);
   };
   return (
     <li key={nomination.imdbID} className='collection-item'>

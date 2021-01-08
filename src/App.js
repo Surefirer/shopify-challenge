@@ -48,7 +48,6 @@ function App() {
           setNominations={setNominations}
           nominations={nominations}
           setMovies={setMovies}
-          movies={movies}
         />
       </div>
     </div>
